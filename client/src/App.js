@@ -9,7 +9,7 @@ import Authentication from "./pages/Authentication";
 import Navbar from "./components/Navbar";
 import ToastMessage from "./components/ToastMessage";
 import { setDarkMode } from "./redux/reducers/userSlice";
-import Menu from "./components/Menu";
+import Menu from "./components/Menu"; 
 import EmployeeRegister from "./components/EmployeeRegister";
 import CreateTask from "./components/CreateTask";
 import Profile from "./pages/Profile";
