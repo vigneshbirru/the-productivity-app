@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "prepare": "cd ../ && husky install ./server/.husky"
   },
-  "author": "Rishav Chanda",
+  "author": "Pradyut Das - Mumbai Hacks",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
