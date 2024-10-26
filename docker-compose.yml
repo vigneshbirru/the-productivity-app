@@ -9,8 +9,7 @@ services:
       args:
         - REACT_APP_SERVER_URL=value
     ports:
-      - "3000:3000"
-      - "2000:80"
+      - "7683:80"
     volumes:
       - ./client/src:/app/src
     environment:
@@ -27,6 +26,7 @@ services:
     environment:
       - PORT=8800
       - MONGO_URL=mongodb://mongo:27017/crm-project
+      - JWT=secret
     depends_on:
       - mongo
     
@@ -35,4 +35,4 @@ services:
     volumes:
       - ./mongo/data:/data/db
     ports:
-      - '27017:27017'
+      - '27010:27017'

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: `${process.env.REACT_APP_SERVER_URL}/api/`
+  baseURL: "http://localhost:8800/api/"
 });
 
 export const AdminRegister = async (data) =>

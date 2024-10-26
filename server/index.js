@@ -10,17 +10,13 @@ import adminRoutes from "./routes/admins.js";
 import employeeRoutes from "./routes/employee.js";
 
 const app = express();
-dotenv.config();
 
 /** Middlewares */
-app.use(express.json());
-const corsConfig = {
-  credentials: true,
-  origin: true
-};
-app.use(cors(corsConfig));
+app.use(cors());
 app.use(morgan("tiny"));
+app.use(express.json());
 
+dotenv.config();
 const port = process.env.PORT || 8800;
 
 const connect = () => {
@@ -35,8 +31,11 @@ const connect = () => {
     });
 };
 
-app.use(express.json());
-
+console.log("works");
+app.get("/api", (req, res) => {
+  console.log("request recieved");
+  res.json({});
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/employee", employeeRoutes);
@@ -50,8 +49,6 @@ app.use((err, req, res, next) => {
     message
   });
 });
-
-app.use(express.json());
 
 app.listen(port, () => {
   console.log("Connected");
